@@ -1,6 +1,5 @@
 package com.example.ecohub.main.navigation.screens.main_screen.components
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -8,7 +7,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.systemBars
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -16,9 +14,11 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import com.adamglin.PhosphorIcons
 import com.adamglin.phosphoricons.Regular
 import com.adamglin.phosphoricons.regular.Gear
@@ -32,9 +32,10 @@ import com.example.ecohub.main.common.theme.Dimens
 import com.example.ecohub.main.common.theme.Elevations
 import com.example.ecohub.main.common.ui.TextOnSurface
 import com.example.ecohub.main.common.ui.objectClickable
-import com.example.ecohub.main.common.ui.paddingSm
-import com.example.ecohub.main.common.ui.paddingXs
-import com.example.ecohub.main.common.ui.roundedPill
+import com.example.ecohub.main.common.ui.paddingXS
+import com.example.ecohub.main.common.ui.roundedPillShape
+import com.example.ecohub.main.common.ui.roundedXLShape
+import com.example.ecohub.main.common.ui.withShapedBackground
 import com.example.ecohub.main.navigation.screens.main_screen.MainScreenRoute
 
 @Composable
@@ -45,25 +46,23 @@ private fun BottomNavItem(
     onClick: () -> Unit
 ) {
     val colors = MaterialTheme.colorScheme
-    val rounded = MaterialTheme.shapes
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(Dimens.xs),
+        verticalArrangement = Arrangement.spacedBy(Dimens.xxs),
     ) {
         Box(
             modifier = Modifier
-                .roundedPill()
+                .clip(shape = roundedPillShape())
                 .objectClickable(onClick = onClick)
         ) {
             Box(
                 modifier = Modifier
-                    .background(
+                    .withShapedBackground(
                         color = if (selected) colors.primary else Color.Transparent,
-                        shape = rounded.extraLarge
+                        shape = roundedPillShape()
                     )
-                    .roundedPill()
-                    .paddingXs()
+                    .paddingXS()
             ) {
                 Icon(
                     modifier = Modifier.size(Dimens.lg),
@@ -83,7 +82,6 @@ fun BottomNavBar(
     pagerRouter: PagerRouterNavigator,
 ) {
     val colors = MaterialTheme.colorScheme
-    val shapes = MaterialTheme.shapes
 
     Surface(
         modifier = Modifier
@@ -92,16 +90,15 @@ fun BottomNavBar(
             .padding(bottom = Dimens.md)
             .systemBarsPadding(),
         color = colors.surface,
-        shape = shapes.large,
+        shape = roundedXLShape(),
         shadowElevation = Elevations.medium
     ) {
         Row(
             modifier = Modifier
-                .paddingSm(),
+                .padding(vertical = 16.dp, horizontal = 32.dp),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceEvenly
+            horizontalArrangement = Arrangement.SpaceBetween
         ) {
-
             BottomNavItem(
                 icon = PhosphorIcons.Regular.House,
                 title = stringResource(R.string.bottom_nav_home),

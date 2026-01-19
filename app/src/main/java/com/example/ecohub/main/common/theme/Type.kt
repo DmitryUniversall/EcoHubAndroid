@@ -49,28 +49,34 @@ val AppTypography = Typography(
         fontSize = 22.sp,
         lineHeight = 26.sp
     ), // Use for product name in header area (left column "Red Apple" in screenshot)
-    headlineMedium = TextStyle(                 // 18sp Medium
+    headlineMedium = TextStyle(                 // 20sp Medium
         fontFamily = AppFontFamily,
         fontWeight = FontWeight.Medium,
+        fontSize = 20.sp,
+        lineHeight = 24.sp
+    ), // Use for section titles like "Description", "More Fruits", "Review"
+    bodyLarge = TextStyle(                      // 18sp Regular
+        fontFamily = AppFontFamily,
+        fontWeight = FontWeight.Normal,
         fontSize = 18.sp,
         lineHeight = 22.sp
-    ), // Use for section titles like "Description", "More Fruits", "Review"
-    bodyLarge = TextStyle(                      // 16sp Regular
+    ), // Use for normal body text (description preview lines)
+    bodyMedium = TextStyle(                     // 16sp Regular
         fontFamily = AppFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 20.sp
-    ), // Use for normal body text (description preview lines)
-    bodyMedium = TextStyle(                     // 14sp Regular
+    ), // Use for slightly smaller body / review text, snippet text in cards
+    bodySmall = TextStyle(                     // 14sp Regular
         fontFamily = AppFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 14.sp,
         lineHeight = 18.sp
-    ), // Use for slightly smaller body / review text, snippet text in cards
-    labelSmall = TextStyle(                     // 12sp Regular
+    ), // Use for metadata (dates like "4th Jan 2024"), small labels, captions
+    labelLarge = TextStyle(                     // 14sp Regular
         fontFamily = AppFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 12.sp,
         lineHeight = 16.sp
-    ) // Use for metadata (dates like "4th Jan 2024"), small labels, captions
+    )
 )

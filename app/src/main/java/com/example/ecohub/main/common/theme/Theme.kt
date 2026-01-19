@@ -11,7 +11,6 @@ fun EcoHubTheme(
     MaterialTheme(
         colorScheme = LightColorScheme,
         typography = AppTypography,
-        shapes = AppShapes,
         content = content
     )
 }

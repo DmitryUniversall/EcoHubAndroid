@@ -12,8 +12,8 @@ object AppColors {
     val Secondary = CoreColors.Neutral.Neutral500
     val OnSecondary = Color.White
 
-    val Background = Color(0xFFF7F7F8)
-    val Surface = Color(0xFFFFFFFF)
+    val Background = Color(0xF7F7F7FF)
+    val Surface = Color.White
     val SurfaceVariant = Color(0xFFF1F2F4) // pale rounded card background (list of fruits cards)
     val OnBackground = Color(0xFF1F1F1F)   // main text color (title "Red Apple")
     val OnSurface = Color(0xFF111111)      // surface text
