@@ -1,0 +1,14 @@
+package com.example.ecohub.main.common.ui.text
+
+import androidx.compose.ui.text.TextLayoutResult
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
+
+data class TextLayoutOptions(
+    val textAlign: TextAlign? = null,
+    val overflow: TextOverflow = TextOverflow.Clip,
+    val softWrap: Boolean = true,
+    val maxLines: Int = Int.MAX_VALUE,
+    val minLines: Int = 1,
+    val onTextLayout: ((TextLayoutResult) -> Unit)? = null
+)

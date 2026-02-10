@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.ecohub.main.common.theme.EcoHubTheme
+import com.example.ecohub.main.common.ui.theme.EcoHubTheme
 import com.example.ecohub.main.navigation.AppNavHost
 
 class MainActivity : ComponentActivity() {

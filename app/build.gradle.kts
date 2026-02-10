@@ -45,14 +45,21 @@ android {
 }
 
 dependencies {
+    // Local data
     implementation(libs.androidx.datastore)
     implementation(libs.androidx.datastore.preferences)
+
+    // ViewModels
     implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    // UI
     implementation(libs.androidx.navigation.compose)
 
-    implementation(libs.androidx.material3)
-    implementation(libs.androidx.compose.ui.text.google.fonts)
     implementation(libs.phosphor.icon)
+    implementation(libs.coil.compose)
+    implementation(libs.androidx.compose.ui.text.google.fonts)
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.compose.material3.window.size.class1)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

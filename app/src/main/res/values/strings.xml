@@ -7,4 +7,9 @@
     <string name="bottom_nav_settings">Settings</string>
     <string name="home_banner_text">Shop Smarter,\nSave More!</string>
     <string name="home_banner_button_text">Get 40% off</string>
+    <string name="delivery_address">Delivery address</string>
+    <string name="delivery_address_template">Dhaka, Bangladesh</string>
+    <string name="search_product_placehoder">Search product...</string>
+    <string name="categories_headline">Categories</string>
+    <string name="see_all_categories">See All</string>
 </resources>

@@ -28,13 +28,12 @@ import com.adamglin.phosphoricons.regular.Scroll
 import com.adamglin.phosphoricons.regular.ShoppingCart
 import com.example.ecohub.R
 import com.example.ecohub.core.ui.pager_router_screen.PagerRouterNavigator
-import com.example.ecohub.main.common.theme.Dimens
-import com.example.ecohub.main.common.theme.Elevations
-import com.example.ecohub.main.common.ui.TextOnSurface
 import com.example.ecohub.main.common.ui.objectClickable
+import com.example.ecohub.main.common.ui.paddingBottomMD
+import com.example.ecohub.main.common.ui.paddingHorizontalMD
 import com.example.ecohub.main.common.ui.paddingXS
-import com.example.ecohub.main.common.ui.roundedPillShape
-import com.example.ecohub.main.common.ui.roundedXLShape
+import com.example.ecohub.main.common.ui.text.TextBodySmall
+import com.example.ecohub.main.common.ui.theme.Locals
 import com.example.ecohub.main.common.ui.withShapedBackground
 import com.example.ecohub.main.navigation.screens.main_screen.MainScreenRoute
 
@@ -46,26 +45,29 @@ private fun BottomNavItem(
     onClick: () -> Unit
 ) {
     val colors = MaterialTheme.colorScheme
+    val spacing = Locals.spacing
+    val shapes = Locals.shapes
+    val dimens = Locals.dimens
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(Dimens.xxs),
+        verticalArrangement = Arrangement.spacedBy(spacing.xxs),
     ) {
         Box(
             modifier = Modifier
-                .clip(shape = roundedPillShape())
+                .clip(shape = shapes.roundedPill)
                 .objectClickable(onClick = onClick)
         ) {
             Box(
                 modifier = Modifier
                     .withShapedBackground(
                         color = if (selected) colors.primary else Color.Transparent,
-                        shape = roundedPillShape()
+                        shape = shapes.roundedPill
                     )
                     .paddingXS()
             ) {
                 Icon(
-                    modifier = Modifier.size(Dimens.lg),
+                    modifier = Modifier.size(dimens.lg),
                     imageVector = icon,
                     contentDescription = null,
                     tint = if (selected) colors.onPrimary else colors.onSurface,
@@ -73,7 +75,10 @@ private fun BottomNavItem(
             }
         }
 
-        TextOnSurface(text = title)
+        TextBodySmall(
+            text = title,
+            color = colors.onSurface
+        )
     }
 }
 
@@ -82,16 +87,18 @@ fun BottomNavBar(
     pagerRouter: PagerRouterNavigator,
 ) {
     val colors = MaterialTheme.colorScheme
+    val shapes = Locals.shapes
+    val dimens = Locals.dimens
 
     Surface(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = Dimens.md)
-            .padding(bottom = Dimens.md)
+            .paddingHorizontalMD()
+            .paddingBottomMD()
             .systemBarsPadding(),
         color = colors.surface,
-        shape = roundedXLShape(),
-        shadowElevation = Elevations.medium
+        shape = shapes.roundedXL,
+        shadowElevation = dimens.xxs
     ) {
         Row(
             modifier = Modifier

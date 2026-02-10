@@ -1,4 +1,4 @@
-package com.example.ecohub.main.common.theme
+package com.example.ecohub.main.common.ui.theme
 
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
@@ -12,7 +12,7 @@ object AppColors {
     val Secondary = CoreColors.Neutral.Neutral500
     val OnSecondary = Color.White
 
-    val Background = Color(0xF7F7F7FF)
+    val Background = Color(0xFFF7F7F7)
     val Surface = Color.White
     val SurfaceVariant = Color(0xFFF1F2F4) // pale rounded card background (list of fruits cards)
     val OnBackground = Color(0xFF1F1F1F)   // main text color (title "Red Apple")
@@ -34,18 +34,3 @@ object AppColors {
     val OnDisabled = Color.White
 }
 
-val LightColorScheme = lightColorScheme(
-    primary = AppColors.Primary,
-    onPrimary = AppColors.OnPrimary,
-    primaryContainer = AppColors.PrimaryVariant,
-    secondary = AppColors.Secondary,
-    onSecondary = AppColors.OnSecondary,
-    background = AppColors.Background,
-    onBackground = AppColors.OnBackground,
-    surface = AppColors.Surface,
-    onSurface = AppColors.OnSurface,
-    surfaceVariant = AppColors.SurfaceVariant,
-    outline = AppColors.Outline,
-    error = AppColors.Error,
-    onError = AppColors.OnError
-)
