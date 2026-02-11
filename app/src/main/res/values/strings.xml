@@ -12,4 +12,8 @@
     <string name="search_product_placehoder">Search product...</string>
     <string name="categories_headline">Categories</string>
     <string name="see_all_categories">See All</string>
+    <string name="test_product_title">Red Apple</string>
+    <string name="test_product_price">10</string>
+    <string name="test_product_currency">$</string>
+    <string name="test_product_weight_unit">kg</string>
 </resources>

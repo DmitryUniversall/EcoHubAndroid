@@ -8,7 +8,6 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ripple
 import androidx.compose.runtime.Composable
@@ -21,8 +20,6 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.Shape
-import com.example.ecohub.main.common.ui.theme.Dimens
-import com.example.ecohub.main.common.ui.theme.Locals
 
 @Composable
 fun Modifier.objectClickable(onClick: () -> Unit) =
@@ -47,15 +44,6 @@ fun Modifier.withShapedBackground(
     this
         .background(brush = brush, shape = shape)
         .clip(shape = shape)
-
-@Composable
-fun Modifier.paddingScreenHorizontal() = this.padding(horizontal = Locals.dimens.screenPadding)
-
-@Composable
-fun Modifier.paddingScreenVertical() = this.padding(vertical = Locals.dimens.screenPadding)
-
-@Composable
-fun Modifier.paddingScreen() = this.padding(horizontal = Locals.dimens.screenPadding)
 
 @Composable
 fun Modifier.backgroundBackground() = this.background(color = MaterialTheme.colorScheme.background)

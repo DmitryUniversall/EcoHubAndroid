@@ -1,4 +1,4 @@
-package com.example.ecohub.main.common.ui.theme
+package com.example.ecohub.main.common.ui.theme.locals
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
@@ -17,10 +17,6 @@ data class Dimens(
     val xxl: Dp,
     val xxxl: Dp,
 
-    // Screen paddings
-    val screenPadding: Dp,
-    val contentPadding: Dp,
-
     // List item spacing
     val itemSpacing: Dp,
     val sectionSpacing: Dp
@@ -35,8 +31,6 @@ data class Dimens(
             xl = 32.dp,
             xxl = 40.dp,
             xxxl = 48.dp,
-            screenPadding = 16.dp,
-            contentPadding = 20.dp,
             itemSpacing = 12.dp,
             sectionSpacing = 24.dp
         )

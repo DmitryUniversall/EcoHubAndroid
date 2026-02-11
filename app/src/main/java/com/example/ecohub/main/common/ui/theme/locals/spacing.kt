@@ -1,4 +1,4 @@
-package com.example.ecohub.main.common.ui.theme
+package com.example.ecohub.main.common.ui.theme.locals
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
@@ -15,7 +15,10 @@ data class Spacing(
     val lg: Dp = 24.dp,
     val xl: Dp = 32.dp,
     val xxl: Dp = 40.dp,
-    val xxxl: Dp = 48.dp
+    val xxxl: Dp = 48.dp,
+
+    // Screen paddings
+    val screenPadding: Dp
 ) {
     companion object {
         fun default(): Spacing = Spacing(
@@ -27,7 +30,8 @@ data class Spacing(
             lg = 24.dp,
             xl = 32.dp,
             xxl = 40.dp,
-            xxxl = 48.dp
+            xxxl = 48.dp,
+            screenPadding = 16.dp
         )
     }
 }

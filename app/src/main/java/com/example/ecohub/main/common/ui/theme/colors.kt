@@ -1,12 +1,11 @@
 package com.example.ecohub.main.common.ui.theme
 
-import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 import com.example.ecohub.core.ui.CoreColors
 
 object AppColors {
-    val Primary = Color(0xFFFF9800)
-    val PrimaryVariant = Color(0xFFFFA726) // lighter orange for highlights
+    val Primary = Color(0xFFFFAB07)
+    val PrimaryVariant = Color(0xFFF9C403) // lighter orange for highlights
     val OnPrimary = Color.White
 
     val Secondary = CoreColors.Neutral.Neutral500
@@ -28,9 +27,10 @@ object AppColors {
     val Info = Color(0xFF0288D1)
     val Disabled = Color(0xFFBDBDBD)
 
+    val HeartRed = Color(0xFFF95552)
+
     val OnSuccess = Color.White
     val OnError = Color.White
     val OnInfo = Color.White
     val OnDisabled = Color.White
 }
-

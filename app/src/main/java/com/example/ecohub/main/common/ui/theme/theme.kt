@@ -4,8 +4,17 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import com.example.ecohub.main.common.ui.theme.locals.Dimens
+import com.example.ecohub.main.common.ui.theme.locals.ExtraColors
 import com.example.ecohub.main.common.ui.theme.locals.Gradients
+import com.example.ecohub.main.common.ui.theme.locals.LightExtraColors
+import com.example.ecohub.main.common.ui.theme.locals.LocalDimens
+import com.example.ecohub.main.common.ui.theme.locals.LocalExtraColors
 import com.example.ecohub.main.common.ui.theme.locals.LocalGradients
+import com.example.ecohub.main.common.ui.theme.locals.LocalShapes
+import com.example.ecohub.main.common.ui.theme.locals.LocalSpacing
+import com.example.ecohub.main.common.ui.theme.locals.Shapes
+import com.example.ecohub.main.common.ui.theme.locals.Spacing
 
 
 object Locals {

@@ -1,4 +1,4 @@
-package com.example.ecohub.main.common.ui.theme
+package com.example.ecohub.main.common.ui.theme.locals
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Immutable

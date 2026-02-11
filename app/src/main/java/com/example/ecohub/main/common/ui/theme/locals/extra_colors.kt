@@ -1,17 +1,22 @@
-package com.example.ecohub.main.common.ui.theme
+package com.example.ecohub.main.common.ui.theme.locals
 
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
+import com.example.ecohub.main.common.ui.theme.AppColors
 
 
 data class ExtraColors(
     val muted: Color,
-    val border: Color
+    val border: Color,
+    val heart: Color,
+    val sale: Color
 )
 
 val LightExtraColors = ExtraColors(
     muted = AppColors.Muted,
-    border = AppColors.Muted
+    border = AppColors.SurfaceVariant,
+    heart = AppColors.HeartRed,
+    sale = AppColors.PrimaryVariant
 )
 
 val LocalExtraColors = staticCompositionLocalOf<ExtraColors> {

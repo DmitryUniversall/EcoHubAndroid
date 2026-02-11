@@ -20,6 +20,7 @@ import com.adamglin.phosphoricons.regular.ShoppingCart
 import com.example.ecohub.R
 import com.example.ecohub.core.ui.pager_router_screen.PagerRouterNavigator
 import com.example.ecohub.main.common.ui.objectClickable
+import com.example.ecohub.main.common.ui.paddingHorizontalScreen
 import com.example.ecohub.main.common.ui.paddingSM
 import com.example.ecohub.main.common.ui.text.TextBodyLarge
 import com.example.ecohub.main.common.ui.text.TextBodyMedium
@@ -39,7 +40,8 @@ fun HomeViewTopBar(
 
     Row(
         modifier = Modifier
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .paddingHorizontalScreen(),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {

@@ -3,6 +3,7 @@ package com.example.ecohub.main.features.home.ui.home_view.components.content.se
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -25,6 +26,7 @@ import coil.compose.SubcomposeAsyncImage
 import com.example.ecohub.R
 import com.example.ecohub.main.common.ui.paddingMD
 import com.example.ecohub.main.common.ui.paddingSM
+import com.example.ecohub.main.common.ui.paddingScreen
 import com.example.ecohub.main.common.ui.paddingXXS
 import com.example.ecohub.main.common.ui.shimmer
 import com.example.ecohub.main.common.ui.text.TextBodyLarge
@@ -56,7 +58,8 @@ fun HomeViewCategoriesSelection() {
     ) {
         Row(
             modifier = Modifier
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .paddingScreen(),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
@@ -75,10 +78,13 @@ fun HomeViewCategoriesSelection() {
             )
         }
 
-        LazyRow(  // TODO: Remove screen padding for items to scroll off screen
+        LazyRow(
             state = listState,
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(spacing.xs)
+            horizontalArrangement = Arrangement.spacedBy(spacing.xs),
+            contentPadding = PaddingValues(
+                horizontal = Locals.spacing.screenPadding
+            )
         ) {
             items(cards) { card ->
                 CategoryCard(
@@ -102,7 +108,7 @@ fun CategoryCard(
 
     Column(
         modifier = Modifier
-            .width(80.dp)
+            .width(76.dp)
             .height(100.dp)
             .withShapedBackground(
                 color = if (selected) colors.primary else colors.surface,

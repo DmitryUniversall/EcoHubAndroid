@@ -8,11 +8,21 @@ import androidx.compose.ui.graphics.Color
 
 @Immutable
 data class Gradients(
-    val primaryLeft: Brush
+    val primaryLeft: Brush,
+    val primaryCenter: Brush
 ) {
     companion object {
         fun default(): Gradients = Gradients(
             primaryLeft = Brush.linearGradient(
+                colors = listOf(
+                    Color(0xFFFFA400),
+                    Color(0xFFFFAB07),
+                    Color(0xFFFFAB07)
+                ),
+                start = Offset.Zero,
+                end = Offset.Infinite
+            ),
+            primaryCenter = Brush.linearGradient(
                 colors = listOf(
                     Color(0xFFFFA400),
                     Color(0xFFFFAB07),

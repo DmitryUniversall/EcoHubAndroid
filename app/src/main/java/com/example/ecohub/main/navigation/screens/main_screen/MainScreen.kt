@@ -1,6 +1,7 @@
 package com.example.ecohub.main.navigation.screens.main_screen
 
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -21,9 +22,11 @@ fun MainScreen() {
         startRoute = MainScreenRoute.Home
     )
 
+    val colors = MaterialTheme.colorScheme
+
     Scaffold(
         bottomBar = { BottomNavBar(pagerRouter = router) },
-        containerColor = Color.Transparent
+        containerColor = colors.background
     ) { padding ->
         PagerRouterScreen(
             modifier = Modifier.fillMaxSize(),

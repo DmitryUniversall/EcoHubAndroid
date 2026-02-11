@@ -1,4 +1,4 @@
-package com.example.ecohub.main.features.home.ui.home_view.components.content.selections
+package com.example.ecohub.main.common.ui.shared
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -33,49 +33,55 @@ import com.adamglin.phosphoricons.regular.MagnifyingGlass
 import com.adamglin.phosphoricons.regular.SlidersHorizontal
 import com.example.ecohub.R
 import com.example.ecohub.main.common.ui.paddingHorizontalMD
+import com.example.ecohub.main.common.ui.paddingHorizontalScreen
 import com.example.ecohub.main.common.ui.text.TextBodyLarge
 import com.example.ecohub.main.common.ui.theme.Locals
 import com.example.ecohub.main.common.ui.withShapedBackground
 
 @Composable
-fun HomeViewSearchSelection() {
+fun SearchSelection() {
     val shapes = Locals.shapes
     val dimens = Locals.dimens
     val spacing = Locals.spacing
     val extraColors = Locals.extraColors
     val colors = MaterialTheme.colorScheme
 
-    Row(
+    Box(
         modifier = Modifier
-            .height(48.dp)
-            .fillMaxWidth()
-            .withShapedBackground(
-                color = colors.surface,
-                shape = shapes.roundedPill
-            )
-            .border(
-                border = BorderStroke(1.dp, color = extraColors.border),
-                shape = shapes.roundedPill
-            )
-            .paddingHorizontalMD(),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(spacing.sm)
+            .paddingHorizontalScreen()
     ) {
-        Icon(
-            modifier = Modifier.size(dimens.lg),
-            imageVector = PhosphorIcons.Regular.MagnifyingGlass,
-            contentDescription = null,
-            tint = colors.onSurface
-        )
+        Row(
+            modifier = Modifier
+                .height(48.dp)
+                .fillMaxWidth()
+                .withShapedBackground(
+                    color = colors.surface,
+                    shape = shapes.roundedPill
+                )
+                .border(
+                    border = BorderStroke(1.dp, color = extraColors.border),
+                    shape = shapes.roundedPill
+                )
+                .paddingHorizontalMD(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(spacing.sm)
+        ) {
+            Icon(
+                modifier = Modifier.size(dimens.lg),
+                imageVector = PhosphorIcons.Regular.MagnifyingGlass,
+                contentDescription = null,
+                tint = colors.onSurface
+            )
 
-        SearchField()
+            SearchField()
 
-        Icon(
-            modifier = Modifier.size(dimens.lg),
-            imageVector = PhosphorIcons.Regular.SlidersHorizontal,
-            contentDescription = null,
-            tint = colors.onSurface
-        )
+            Icon(
+                modifier = Modifier.size(dimens.lg),
+                imageVector = PhosphorIcons.Regular.SlidersHorizontal,
+                contentDescription = null,
+                tint = colors.onSurface
+            )
+        }
     }
 }
 

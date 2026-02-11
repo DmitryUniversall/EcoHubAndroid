@@ -4,17 +4,19 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.ecohub.core.ui.pager_router_screen.PagerRouterNavigator
-import com.example.ecohub.main.common.ui.paddingScreen
+import com.example.ecohub.main.common.ui.paddingHorizontalScreen
+import com.example.ecohub.main.common.ui.paddingVerticalScreen
 import com.example.ecohub.main.common.ui.theme.Locals
 import com.example.ecohub.main.common.ui.withShapedBackground
 import com.example.ecohub.main.features.home.ui.home_view.components.HomeViewBanner
@@ -32,37 +34,37 @@ fun HomeView(
     val spacing = Locals.spacing
 
     val bannerHeight = 200
-    val topBarHeight = 300
+    val topBarHeight = 120
 
-    Box(
+    val scrollState = rememberScrollState()
+
+    Column(
         modifier = Modifier
-            .fillMaxSize()
-            .paddingScreen()
+            .fillMaxWidth()
+            .background(color = colors.surface)
+            .verticalScroll(scrollState)
+            .padding(
+                top = layoutPadding.calculateTopPadding(),
+                bottom = layoutPadding.calculateBottomPadding()
+            )
     ) {
         Box(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.paddingVerticalScreen()
         ) {
             Column {
                 Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(topBarHeight.dp)
-                        .background(color = colors.surface)
-                        .padding(top = layoutPadding.calculateTopPadding())
+                    modifier = Modifier.height(topBarHeight.dp)
                 ) {
                     HomeViewTopBar(pagerRouter = pagerRouter)
                 }
 
                 Box(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(1f)
-                        .offset(y = -spacing.xl)
+                        .offset(y = (-spacing.xl.value + bannerHeight / 2).dp)
                         .withShapedBackground(
                             color = colors.background,
                             shape = shapes.roundedTopXL
                         )
-                        .padding(top = (bannerHeight / 2).dp)
                 ) {
                     HomeViewContent()
                 }
@@ -71,7 +73,8 @@ fun HomeView(
             HomeViewBanner(
                 bannerHeight = bannerHeight,
                 modifier = Modifier
-                    .offset(y = (300 - (bannerHeight / 2) - spacing.xl.value).dp)
+                    .offset(y = (topBarHeight - spacing.xl.value).dp)
+                    .paddingHorizontalScreen()
             )
         }
     }

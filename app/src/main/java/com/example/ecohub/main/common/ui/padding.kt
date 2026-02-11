@@ -75,3 +75,6 @@ import com.example.ecohub.main.common.ui.theme.Locals
 @Composable fun Modifier.paddingEndXXL()  = padding(end = Locals.spacing.xxl)
 @Composable fun Modifier.paddingEndXXXL() = padding(end = Locals.spacing.xxxl)
 
+@Composable fun Modifier.paddingScreen() = this.padding(horizontal = Locals.spacing.screenPadding)
+@Composable fun Modifier.paddingHorizontalScreen() = this.padding(horizontal = Locals.spacing.screenPadding)
+@Composable fun Modifier.paddingVerticalScreen() = this.padding(vertical = Locals.spacing.screenPadding)
