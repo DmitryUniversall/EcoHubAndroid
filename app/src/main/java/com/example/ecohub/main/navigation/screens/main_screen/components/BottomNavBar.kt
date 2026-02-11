@@ -94,7 +94,6 @@ fun BottomNavBar(
         modifier = Modifier
             .fillMaxWidth()
             .paddingHorizontalMD()
-            .paddingBottomMD()
             .systemBarsPadding(),
         color = colors.surface,
         shape = shapes.roundedXL,
