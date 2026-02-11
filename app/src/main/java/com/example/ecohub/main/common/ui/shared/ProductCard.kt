@@ -101,10 +101,7 @@ fun ProductCard(
                         )
 
                         TextBodyLarge(
-                            text = "${stringResource(R.string.test_product_currency)}${
-                                stringResource(
-                                    R.string.test_product_price
-                                )
+                            text = "${stringResource(R.string.test_product_currency)}${stringResource(R.string.test_product_price)
                             }/${stringResource(R.string.test_product_weight_unit)}",
                             color = colors.onSurface,
                             override = {
