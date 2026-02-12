@@ -69,7 +69,7 @@ fun HomeViewBanner(
                     TextDisplayMedium(
                         text = stringResource(R.string.home_banner_text),
                         color = colors.onPrimary,
-                        override = {
+                        styleOverride = {
                             fontWeight = FontWeight.Bold
                         }
                     )
@@ -91,7 +91,7 @@ fun HomeViewBanner(
                         TextBodyLarge(
                             text = stringResource(R.string.home_banner_button_text),
                             color = colors.surface,
-                            override = {
+                            styleOverride = {
                                 fontWeight = FontWeight.SemiBold
                             }
                         )

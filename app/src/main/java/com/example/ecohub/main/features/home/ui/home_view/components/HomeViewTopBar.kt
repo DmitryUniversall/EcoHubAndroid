@@ -50,7 +50,7 @@ fun HomeViewTopBar(
         ) {
             TextBodyLarge(
                 text = stringResource(R.string.delivery_address),
-                override = {
+                styleOverride = {
                     fontWeight = FontWeight.SemiBold
                 }
             )
@@ -68,7 +68,7 @@ fun HomeViewTopBar(
                 TextBodyMedium(
                     text = stringResource(R.string.delivery_address_template),
                     color = extraColors.muted,
-                    override = {
+                    styleOverride = {
                         fontWeight = FontWeight.SemiBold
                     }
                 )
@@ -99,7 +99,7 @@ fun HomeViewTopBar(
             TextBodyLarge(
                 text = "10",
                 color = colors.surface,
-                override = {
+                styleOverride = {
                     fontWeight = FontWeight.SemiBold
                 }
             )

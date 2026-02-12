@@ -7,7 +7,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.TextUnit
 
-data class TextOverrides(
+data class TextStyleOverrides(
     val fontSize: TextUnit? = null,
     val fontWeight: FontWeight? = null,
     val fontStyle: FontStyle? = null,
@@ -32,7 +32,7 @@ data class TextOverrides(
         var letterSpacing: TextUnit? = null,
         var textDecoration: TextDecoration? = null
     ) {
-        fun build() = TextOverrides(
+        fun build() = TextStyleOverrides(
             fontSize,
             fontWeight,
             fontStyle,

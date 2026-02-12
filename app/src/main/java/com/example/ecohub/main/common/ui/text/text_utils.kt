@@ -11,15 +11,15 @@ fun TextDisplayLarge(
     text: String,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
-    override: (TextOverrides.Builder.() -> Unit)? = null,
-    layout: TextLayoutOptions = TextLayoutOptions()
+    styleOverride: (TextStyleOverrides.Builder.() -> Unit)? = null,
+    layoutOverride: (TextLayoutOptions.Builder.() -> Unit)? = null
 ) = AppText(
     text = text,
     style = MaterialTheme.typography.displayLarge,
     modifier = modifier,
     color = color,
-    override = override,
-    layout = layout
+    styleOverride = styleOverride,
+    layoutOverride = layoutOverride
 )
 
 @Composable
@@ -27,15 +27,15 @@ fun TextDisplayMedium(
     text: String,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
-    override: (TextOverrides.Builder.() -> Unit)? = null,
-    layout: TextLayoutOptions = TextLayoutOptions()
+    styleOverride: (TextStyleOverrides.Builder.() -> Unit)? = null,
+    layoutOverride: (TextLayoutOptions.Builder.() -> Unit)? = null
 ) = AppText(
     text = text,
     style = MaterialTheme.typography.displayMedium,
     modifier = modifier,
     color = color,
-    override = override,
-    layout = layout
+    styleOverride = styleOverride,
+    layoutOverride = layoutOverride
 )
 
 @Composable
@@ -43,15 +43,15 @@ fun TextDisplaySmall(
     text: String,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
-    override: (TextOverrides.Builder.() -> Unit)? = null,
-    layout: TextLayoutOptions = TextLayoutOptions()
+    styleOverride: (TextStyleOverrides.Builder.() -> Unit)? = null,
+    layoutOverride: (TextLayoutOptions.Builder.() -> Unit)? = null
 ) = AppText(
     text = text,
     style = MaterialTheme.typography.displaySmall,
     modifier = modifier,
     color = color,
-    override = override,
-    layout = layout
+    styleOverride = styleOverride,
+    layoutOverride = layoutOverride
 )
 
 @Composable
@@ -59,15 +59,15 @@ fun TextHeadlineLarge(
     text: String,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
-    override: (TextOverrides.Builder.() -> Unit)? = null,
-    layout: TextLayoutOptions = TextLayoutOptions()
+    styleOverride: (TextStyleOverrides.Builder.() -> Unit)? = null,
+    layoutOverride: (TextLayoutOptions.Builder.() -> Unit)? = null
 ) = AppText(
     text = text,
     style = MaterialTheme.typography.headlineLarge,
     modifier = modifier,
     color = color,
-    override = override,
-    layout = layout
+    styleOverride = styleOverride,
+    layoutOverride = layoutOverride
 )
 
 @Composable
@@ -75,15 +75,15 @@ fun TextHeadlineMedium(
     text: String,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
-    override: (TextOverrides.Builder.() -> Unit)? = null,
-    layout: TextLayoutOptions = TextLayoutOptions()
+    styleOverride: (TextStyleOverrides.Builder.() -> Unit)? = null,
+    layoutOverride: (TextLayoutOptions.Builder.() -> Unit)? = null
 ) = AppText(
     text = text,
     style = MaterialTheme.typography.headlineMedium,
     modifier = modifier,
     color = color,
-    override = override,
-    layout = layout
+    styleOverride = styleOverride,
+    layoutOverride = layoutOverride
 )
 
 @Composable
@@ -91,15 +91,15 @@ fun TextHeadlineSmall(
     text: String,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
-    override: (TextOverrides.Builder.() -> Unit)? = null,
-    layout: TextLayoutOptions = TextLayoutOptions()
+    styleOverride: (TextStyleOverrides.Builder.() -> Unit)? = null,
+    layoutOverride: (TextLayoutOptions.Builder.() -> Unit)? = null
 ) = AppText(
     text = text,
     style = MaterialTheme.typography.headlineSmall,
     modifier = modifier,
     color = color,
-    override = override,
-    layout = layout
+    styleOverride = styleOverride,
+    layoutOverride = layoutOverride
 )
 
 
@@ -108,8 +108,8 @@ fun TextBodyLarge(
     text: String,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
-    override: (TextOverrides.Builder.() -> Unit)? = null,
-    layout: TextLayoutOptions = TextLayoutOptions()
+    styleOverride: (TextStyleOverrides.Builder.() -> Unit)? = null,
+    layoutOverride: (TextLayoutOptions.Builder.() -> Unit)? = null
 ) {
 
     AppText(
@@ -117,8 +117,8 @@ fun TextBodyLarge(
         style = MaterialTheme.typography.bodyLarge,
         modifier = modifier,
         color = color,
-        override = override,
-        layout = layout
+        styleOverride = styleOverride,
+        layoutOverride = layoutOverride
     )
 }
 
@@ -127,15 +127,15 @@ fun TextBodyMedium(
     text: String,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
-    override: (TextOverrides.Builder.() -> Unit)? = null,
-    layout: TextLayoutOptions = TextLayoutOptions()
+    styleOverride: (TextStyleOverrides.Builder.() -> Unit)? = null,
+    layoutOverride: (TextLayoutOptions.Builder.() -> Unit)? = null
 ) = AppText(
     text = text,
     style = MaterialTheme.typography.bodyMedium,
     modifier = modifier,
     color = color,
-    override = override,
-    layout = layout
+    styleOverride = styleOverride,
+    layoutOverride = layoutOverride
 )
 
 @Composable
@@ -143,13 +143,13 @@ fun TextBodySmall(
     text: String,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
-    override: (TextOverrides.Builder.() -> Unit)? = null,
-    layout: TextLayoutOptions = TextLayoutOptions()
+    styleOverride: (TextStyleOverrides.Builder.() -> Unit)? = null,
+    layoutOverride: (TextLayoutOptions.Builder.() -> Unit)? = null
 ) = AppText(
     text = text,
     style = MaterialTheme.typography.bodySmall,
     modifier = modifier,
     color = color,
-    override = override,
-    layout = layout
+    styleOverride = styleOverride,
+    layoutOverride = layoutOverride
 )

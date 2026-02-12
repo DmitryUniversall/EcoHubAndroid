@@ -12,21 +12,22 @@ fun AppText(
     style: TextStyle,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
-    override: (TextOverrides.Builder.() -> Unit)? = null,
-    layout: TextLayoutOptions = TextLayoutOptions()
+    styleOverride: (TextStyleOverrides.Builder.() -> Unit)? = null,
+    layoutOverride: (TextLayoutOptions.Builder.() -> Unit)? = null
 ) {
-    val overrides = if (override == null) TextOverrides() else TextOverrides.Builder().apply(override).build()
+    val styleOverrides = if (styleOverride == null) TextStyleOverrides() else TextStyleOverrides.Builder().apply(styleOverride).build()
+    val layoutOverrides = if (layoutOverride == null) TextLayoutOptions() else TextLayoutOptions.Builder().apply(layoutOverride).build()
 
     Text(
         text = text,
         modifier = modifier,
         color = color,
-        style = overrides.applyTo(style),
-        textAlign = layout.textAlign,
-        overflow = layout.overflow,
-        softWrap = layout.softWrap,
-        maxLines = layout.maxLines,
-        minLines = layout.minLines,
-        onTextLayout = layout.onTextLayout
+        style = styleOverrides.applyTo(style),
+        textAlign = layoutOverrides.textAlign,
+        overflow = layoutOverrides.overflow,
+        softWrap = layoutOverrides.softWrap,
+        maxLines = layoutOverrides.maxLines,
+        minLines = layoutOverrides.minLines,
+        onTextLayout = layoutOverrides.onTextLayout
     )
 }

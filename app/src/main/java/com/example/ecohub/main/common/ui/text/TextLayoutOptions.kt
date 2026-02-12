@@ -11,4 +11,22 @@ data class TextLayoutOptions(
     val maxLines: Int = Int.MAX_VALUE,
     val minLines: Int = 1,
     val onTextLayout: ((TextLayoutResult) -> Unit)? = null
-)
+) {
+    class Builder(
+        var textAlign: TextAlign? = null,
+        var overflow: TextOverflow = TextOverflow.Clip,
+        var softWrap: Boolean = true,
+        var maxLines: Int = Int.MAX_VALUE,
+        var minLines: Int = 1,
+        var onTextLayout: ((TextLayoutResult) -> Unit)? = null
+    ) {
+        fun build() = TextLayoutOptions(
+            textAlign,
+            overflow,
+            softWrap,
+            maxLines,
+            minLines,
+            onTextLayout
+        )
+    }
+}

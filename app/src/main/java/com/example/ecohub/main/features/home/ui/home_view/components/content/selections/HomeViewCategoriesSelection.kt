@@ -65,14 +65,14 @@ fun HomeViewCategoriesSelection() {
         ) {
             TextHeadlineMedium(
                 text = stringResource(R.string.categories_headline),
-                override = {
+                styleOverride = {
                     fontWeight = FontWeight.SemiBold
                 }
             )
             TextBodyLarge(
                 text = stringResource(R.string.see_all_categories),
                 color = extraColors.muted,
-                override = {
+                styleOverride = {
                     fontWeight = FontWeight.SemiBold
                 }
             )

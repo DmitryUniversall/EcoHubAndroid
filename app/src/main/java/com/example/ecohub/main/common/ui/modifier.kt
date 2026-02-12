@@ -29,6 +29,14 @@ fun Modifier.objectClickable(onClick: () -> Unit) =
         onClick = onClick
     )
 
+@Composable
+fun Modifier.objectClickableNoAnimation(onClick: () -> Unit) =
+    this.clickable(
+        indication = null,
+        interactionSource = remember { MutableInteractionSource() },
+        onClick = onClick
+    )
+
 fun Modifier.withShapedBackground(
     color: Color,
     shape: Shape
