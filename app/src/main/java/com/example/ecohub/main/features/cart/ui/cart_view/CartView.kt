@@ -37,9 +37,7 @@ import com.adamglin.phosphoricons.Regular
 import com.adamglin.phosphoricons.regular.Minus
 import com.adamglin.phosphoricons.regular.Plus
 import com.example.ecohub.main.common.ui.objectClickable
-import com.example.ecohub.main.common.ui.paddingHorizontalScreen
 import com.example.ecohub.main.common.ui.paddingMD
-import com.example.ecohub.main.common.ui.paddingScreen
 import com.example.ecohub.main.common.ui.paddingXXS
 import com.example.ecohub.main.common.ui.shimmer
 import com.example.ecohub.main.common.ui.text.TextBodyLarge
